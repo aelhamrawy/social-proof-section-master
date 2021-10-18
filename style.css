@@ -35,10 +35,18 @@ main {
   background-position: top left, bottom right;
   padding: 8.25rem 10rem;
 }
+section {
+  padding-right: 3rem;
+}
+.stars {
+  padding-left: 2rem;
+}
 
 section,
 .stars {
-  flex: 1;
+  width: 48%;
+  display: inline-block;
+  vertical-align: top;
 }
 
 h1 {
@@ -46,13 +54,11 @@ h1 {
   font-size: 3rem;
   font-weight: 700;
   line-height: 1;
-  width: 75%;
 }
 
 section p {
   color: var(--dark-Grayish-Magenta);
   padding-top: 1rem;
-  width: 85%;
 }
 
 .stars div {
@@ -133,25 +139,27 @@ section p {
   color: var(--soft-pink);
 }
 
-@media (max-width: 650px) {
+@media (max-width: 1000px) {
   main {
-    padding: 5.5rem 1rem 2rem 1rem;
+    padding: 5.5rem 1.5rem 2rem 1.5rem;
     background-image: url("./images/bg-pattern-top-mobile.svg"),
       url("./images/bg-pattern-bottom-mobile.svg");
   }
 
-  h1 {
+  section,
+  .stars {
+    display: block;
     width: 100%;
+    padding: 0;
     text-align: center;
+  }
+
+  h1 {
     font-size: 2.5rem;
   }
 
   section p {
-    margin-right: 0;
-    width: 100%;
-    text-align: center;
     font-size: 0.9rem;
-    padding: 1rem 0.5rem;
   }
 
   .stars div {
@@ -159,13 +167,16 @@ section p {
     width: 100%;
     text-align: center;
   }
+
   .stars div p::before {
     display: block;
     padding: 0.2rem 0;
   }
+
   .cards {
     margin-top: 2rem;
   }
+
   .card {
     width: fit-content;
     height: fit-content;

@@ -59,11 +59,12 @@ h1 {
 section p {
   color: var(--dark-Grayish-Magenta);
   padding-top: 1rem;
+  line-height: 1.5rem;
 }
 
 .stars div {
   background-color: var(--light-Grayish-Magenta);
-  padding: 1rem 3rem;
+  padding: 1rem 2rem;
   margin: 1rem 0rem;
   border-radius: 0.5rem;
   color: var(--very-dark-magenta);
@@ -81,9 +82,8 @@ section p {
 }
 
 .stars div p::before {
-  content: url("./images/icon-star.svg") url("./images/icon-star.svg")
-    url("./images/icon-star.svg") url("./images/icon-star.svg")
-    url("./images/icon-star.svg");
+  content: url("./images/icon-star.svg") "\00a0"url("./images/icon-star.svg") "\00a0"url("./images/icon-star.svg")
+    "\00a0"url("./images/icon-star.svg") "\00a0"url("./images/icon-star.svg");
   padding-right: 2rem;
 }
 
